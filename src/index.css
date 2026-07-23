@@ -13,8 +13,8 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 2px;
+  padding: 2px;
   box-sizing: border-box;
 }
 
@@ -46,6 +46,12 @@ img, video {
   width: 100%;
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, p, a, span, button {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .reveal-section {

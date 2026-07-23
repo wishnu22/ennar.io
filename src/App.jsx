@@ -157,7 +157,7 @@ function App() {
 
             <motion.div
               whileHover={{ y: -5, scale: 1.01 }}
-              className="reveal-media reveal-parallax relative overflow-hidden rounded-[2.75rem] border border-slate-200/80 bg-white p-3 shadow-[0_32px_110px_rgba(17,24,39,0.10)]"
+              className="reveal-media reveal-parallax relative min-w-0 overflow-hidden rounded-[2.75rem] border border-slate-200/80 bg-white p-3 shadow-[0_32px_110px_rgba(17,24,39,0.10)]"
             >
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,24,39,0.1),rgba(17,24,39,0.52))]" />
               <div className="absolute inset-x-6 top-6 z-10 rounded-full border border-white/40 bg-black/15 px-3 py-1 text-[0.62rem] uppercase tracking-[0.35em] text-white backdrop-blur-sm">
@@ -167,7 +167,7 @@ function App() {
                 loading="lazy"
                 src={img4}
                 alt="Luxury bathroom interior"
-                className="h-[430px] w-full rounded-[2rem] object-cover object-[center_58%] sm:h-[520px]"
+                className="w-full rounded-[2rem] object-cover object-[center_58%] aspect-[4/5] sm:aspect-[16/10]"
               />
               <div className="absolute bottom-6 left-6 right-6 z-10 max-w-md rounded-[1.3rem] border border-white/20 bg-black/22 px-4 py-3 text-white backdrop-blur-sm">
                 <p className="text-[0.66rem] uppercase tracking-[0.34em] text-[#E7CD9A]">Material Story</p>
@@ -190,10 +190,15 @@ function App() {
               <motion.article
                 key={collections[0].title}
                 whileHover={{ y: -6, scale: 1.01 }}
-                className="reveal-item group overflow-hidden rounded-[2.3rem] border border-slate-200/70 bg-white shadow-[0_24px_90px_rgba(17,24,39,0.06)]"
+                className="reveal-item group min-w-0 overflow-hidden rounded-[2.3rem] border border-slate-200/70 bg-white shadow-[0_24px_90px_rgba(17,24,39,0.06)]"
               >
                 <div className="relative overflow-hidden">
-                  <img loading="lazy" src={collections[0].image} alt={collections[0].title} className="reveal-parallax h-[420px] w-full object-cover object-center transition duration-900 group-hover:scale-105 sm:h-[560px]" />
+                  <img
+                    loading="lazy"
+                    src={collections[0].image}
+                    alt={collections[0].title}
+                    className="reveal-parallax w-full object-cover object-center transition duration-900 group-hover:scale-105 aspect-[4/5] sm:aspect-[16/10]"
+                  />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,24,39,0.08),rgba(17,24,39,0.56))]" />
                   <div className="absolute inset-x-6 bottom-6 z-10 max-w-xl rounded-[1.35rem] border border-white/20 bg-black/20 p-5 text-white backdrop-blur-sm">
                     <p className="text-[0.66rem] uppercase tracking-[0.38em] text-[#E7CD9A]">Collection 01</p>
@@ -211,13 +216,18 @@ function App() {
                   <motion.article
                     key={item.title}
                     whileHover={{ y: -5, scale: 1.01 }}
-                    className="reveal-item group overflow-hidden rounded-[2rem] border border-slate-200/70 bg-white shadow-[0_16px_72px_rgba(17,24,39,0.05)]"
+                    className="reveal-item group min-w-0 overflow-hidden rounded-[2rem] border border-slate-200/70 bg-white shadow-[0_16px_72px_rgba(17,24,39,0.05)]"
                   >
                     <div className="grid sm:grid-cols-[0.95fr_1.05fr]">
-                      <div className="overflow-hidden">
-                        <img loading="lazy" src={item.image} alt={item.title} className="reveal-parallax h-60 w-full object-cover transition duration-900 group-hover:scale-105 sm:h-full" />
+                      <div className="min-w-0 overflow-hidden">
+                        <img
+                          loading="lazy"
+                          src={item.image}
+                          alt={item.title}
+                          className="reveal-parallax w-full object-cover transition duration-900 group-hover:scale-105 aspect-[4/3] sm:aspect-auto sm:min-h-[220px]"
+                        />
                       </div>
-                      <div className="flex flex-col justify-center p-6 sm:p-7">
+                      <div className="flex min-w-0 flex-col justify-center p-6 sm:p-7">
                         <p className="text-[0.64rem] font-semibold uppercase tracking-[0.38em] text-[#C7A15A]">Collection 0{index + 2}</p>
                         <h3 className="mt-2 font-display text-[1.9rem] leading-none text-slate-900">{item.title}</h3>
                         <p className="mt-3 text-[0.94rem] leading-7 text-slate-600">{item.text}</p>
@@ -257,9 +267,14 @@ function App() {
               </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              <img loading="lazy" src={img5} alt="Luxury bathroom vanity" className="reveal-item reveal-media reveal-parallax h-72 rounded-[2rem] object-cover md:h-full" />
-              <motion.div whileHover={{ y: -4, scale: 1.01 }} className="reveal-item flex flex-col justify-between rounded-[2rem] border border-white/10 bg-white/10 p-6 sm:p-7">
+            <div className="grid min-w-0 gap-6 md:grid-cols-2">
+              <img
+                loading="lazy"
+                src={img5}
+                alt="Luxury bathroom vanity"
+                className="reveal-item reveal-media reveal-parallax w-full rounded-[2rem] object-cover aspect-[4/3] md:aspect-auto md:min-h-[340px]"
+              />
+              <motion.div whileHover={{ y: -4, scale: 1.01 }} className="reveal-item flex min-w-0 flex-col justify-between rounded-[2rem] border border-white/10 bg-white/10 p-6 sm:p-7">
                 <div>
                   <div className="inline-flex rounded-full bg-[#C7A15A]/20 p-3 text-[#C7A15A]">
                     <FiDroplet size={22} />
@@ -271,8 +286,8 @@ function App() {
                   Book a consultation <FiArrowRight />
                 </a>
               </motion.div>
-              <div className="reveal-item md:col-span-2 overflow-hidden rounded-[2rem] border border-white/10 bg-white/10">
-                <img loading="lazy" src={img1} alt="Luxury bathroom ambience" className="reveal-parallax h-56 w-full object-cover object-[center_58%]" />
+              <div className="reveal-item md:col-span-2 min-w-0 overflow-hidden rounded-[2rem] border border-white/10 bg-white/10">
+                <img loading="lazy" src={img1} alt="Luxury bathroom ambience" className="reveal-parallax w-full object-cover object-[center_58%] aspect-[16/9]" />
               </div>
             </div>
           </div>

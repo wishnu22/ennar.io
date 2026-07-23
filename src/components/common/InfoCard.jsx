@@ -4,7 +4,7 @@ function InfoCard({ icon: Icon, title, text }) {
   return (
     <motion.article
       whileHover={{ y: -6, scale: 1.01 }}
-      className="rounded-[2rem] border border-slate-200/70 bg-white/80 p-7 shadow-[0_18px_72px_rgba(17,24,39,0.05)] backdrop-blur sm:p-8"
+      className="flex h-full min-w-0 flex-col rounded-[2rem] border border-slate-200/70 bg-white/80 p-6 shadow-[0_18px_72px_rgba(17,24,39,0.05)] backdrop-blur sm:p-8"
     >
       <div className="mb-6 flex items-center gap-3 text-[#C7A15A]">
         <div className="rounded-full bg-[#F7F5F2] p-2.5">
