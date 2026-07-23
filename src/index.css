@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --bg: #F7F5F2;
+  --surface: #FFFFFF;
+  --text: #111827;
+  --muted: #6B7280;
+  --gold: #C7A15A;
+  --dark: #111827;
+  --heading: 'Cormorant Garamond', serif;
+  --body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.01em;
+  background-image: radial-gradient(circle at top left, rgba(199,161,90,0.08), transparent 24%), radial-gradient(circle at bottom right, rgba(17,24,39,0.04), transparent 20%);
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+@keyframes ambientFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -14px, 0) scale(1.06); }
+}
+
+img, video {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+
+.reveal-section {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+.reveal-card,
+.reveal-media,
+.reveal-heading,
+.reveal-para,
+.reveal-item {
+  min-width: 0;
+  max-width: 100%;
+  will-change: transform, opacity, clip-path, filter;
+}
+
+.reveal-heading > *,
+.reveal-para,
+.reveal-item > * {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.font-display {
+  font-family: var(--heading);
+}
+
+::selection {
+  background: rgba(199, 161, 90, 0.35);
+  color: #111827;
+}
+
+a:hover,
+button:hover {
+  transition: all 0.3s ease;
+}
+
+main section {
+  position: relative;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(199, 161, 90, 0.8);
+  outline-offset: 3px;
+}
+
+.hero-word {
+  will-change: transform, opacity, filter, clip-path;
+}
+
+.hero-ambient {
+  animation: ambientFloat 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
