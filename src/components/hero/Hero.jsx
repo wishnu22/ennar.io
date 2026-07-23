@@ -81,7 +81,7 @@ function Hero() {
         loop
         playsInline
         preload="auto"
-        className="absolute inset-0 h-full w-full object-cover opacity-80 brightness-[70%] contrast-[110%] saturate-[104%]"
+        className="absolute inset-0 h-full min-h-screen w-full min-w-full object-cover object-center opacity-80 brightness-[70%] contrast-[110%] saturate-[104%]"
         poster={heroPoster}
       >
         <source src={heroVideo} type="video/mp4" />

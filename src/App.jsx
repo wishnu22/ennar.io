@@ -26,12 +26,12 @@ const collections = [
   {
     title: 'Ceramic Essentials',
     text: 'Wash basins and sanitaryware finished with remarkable softness and texture.',
-    image: img8,
+    image: img7,
   },
   {
     title: 'Immersive Showers',
     text: 'Thermal comfort and refined detail for the most considered spaces.',
-    image: img7,
+    image: img8,
   },
 ]
 
@@ -330,14 +330,24 @@ function App() {
         </section>
       </main>
 
-      <footer className="border-t border-slate-200/70 bg-[#F7F5F2] px-4 py-10 text-sm text-slate-600 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-[1380px] flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Ennar Enterprises. Crafted for timeless interiors.</p>
+      <footer id="footer-contact" className="border-t border-slate-200/70 bg-[#F7F5F2] px-4 py-10 text-sm text-slate-600 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[1380px] flex-col gap-6 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-xl">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-[#C7A15A]">Visit Store</p>
+            <p className="mt-3 text-base font-semibold text-slate-900">Midhun NR</p>
+            <p className="mt-1">+91 80890 80255</p>
+            <p className="mt-2 leading-7">Moonupedika Beach RD, Devamnagalam, Kerala 680681</p>
+          </div>
+
           <div className="flex flex-wrap gap-4 sm:gap-6">
             <a href="#top" className="transition hover:text-[#C7A15A]">Top</a>
             <a href="#collections" className="transition hover:text-[#C7A15A]">Collections</a>
             <a href="#contact" className="transition hover:text-[#C7A15A]">Contact</a>
           </div>
+        </div>
+
+        <div className="mx-auto mt-6 max-w-[1380px] border-t border-slate-200/70 pt-4">
+          <p>© 2026 Ennar Enterprises. Crafted for timeless interiors.</p>
         </div>
       </footer>
     </div>

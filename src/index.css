@@ -42,11 +42,17 @@ body {
   50% { transform: translate3d(0, -14px, 0) scale(1.06); }
 }
 
-img, video {
+img {
   width: 100%;
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+video {
+  width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, p, a, span, button {
