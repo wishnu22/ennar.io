@@ -334,8 +334,8 @@ function App() {
         <div className="mx-auto flex max-w-[1380px] flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl">
             <p className="text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-[#C7A15A]">Visit Store</p>
-            <p className="mt-3 text-base font-semibold text-slate-900">Midhun NR</p>
-            <p className="mt-1">+91 80890 80255</p>
+            <p className="mt-3 text-base font-semibold text-slate-900">Ennar Enterprises</p>
+            <p className="mt-1">+91 8848 630199</p>
             <p className="mt-2 leading-7">Moonupedika Beach RD, Devamnagalam, Kerala 680681</p>
           </div>
 
